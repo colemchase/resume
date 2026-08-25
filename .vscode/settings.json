@@ -1,0 +1,11 @@
+{
+  "makefile.makeDirectory": "${workspaceFolder}",
+  "makefile.makefilePath": "Makefile",
+  "makefile.buildTarget": "all",
+  "makefile.cleanTarget": "clean",
+  "makefile.configurations": [
+    {
+      "name": "Default"
+    }
+  ]
+}

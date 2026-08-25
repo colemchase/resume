@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build resume PDF",
+      "type": "shell",
+      "command": "make",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean resume build",
+      "type": "shell",
+      "command": "make clean",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open resume PDF",
+      "type": "shell",
+      "command": "open build/resume.pdf",
+      "dependsOn": "Build resume PDF",
+      "problemMatcher": []
+    }
+  ]
+}
