@@ -7,6 +7,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\itemsep}{2pt}
+\setlength{\leftmargini}{12pt}
 
 \newcommand{\role}[4]{
   \textbf{#1} \hfill #2\\
@@ -27,6 +28,7 @@
 \newenvironment{resitemize}{
   \begin{itemize}
   \setlength{\itemsep}{1pt}
+  \setlength{\topsep}{1pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
@@ -38,53 +40,59 @@
 \href{https://github.com/colemchase}{github.com/colemchase} \quad
 \href{https://www.linkedin.com/in/thechasecoleman}{linkedin.com/in/thechasecoleman}
 
-\ressection{Skills}
-\textbf{Languages:} Python, TypeScript, JavaScript, Java, Scala, SQL, Bash\\
-\textbf{Infrastructure:} AWS, Kubernetes, Docker, CDK, EC2, IAM, CI/CD, Linux, GitHub Actions\\
-\textbf{Systems:} Backend APIs, distributed systems, cloud security, data pipelines, observability, testing\\
-\textbf{Machine Learning:} Feature extraction, model evaluation, Random Forests, OpenFace, Python ML tooling
-
 \ressection{Experience}
-\role{Booz Allen Hamilton}{McLean, VA}{AWS Platform Engineer / Technical Consultant}{Present}
+\role{Booz Allen Hamilton}{McLean, VA}{AWS Platform Engineer}{Present}
 \begin{resitemize}
-  \item Engineer AWS platform capabilities across infrastructure, identity, security, and delivery workflows for client environments.
-  \item Design and maintain cloud automation using infrastructure-as-code, containerized services, and CI/CD practices.
+  \item Design, build, and maintain AWS platform capabilities across infrastructure, identity, security, and delivery workflows.
+  \item Write infrastructure-as-code and automation for containerized services, CI/CD pipelines, and repeatable cloud deployments.
+  \item Debug platform issues across application, network, identity, and runtime layers; document fixes and operational patterns.
 \end{resitemize}
 
-\role{CareFirst BlueCross BlueShield}{Washington, DC}{Cloud / Software Engineering}{Prior}
+\role{CareFirst BlueCross BlueShield}{Washington, DC}{Software Engineer, Cloud Platforms}{Prior}
 \begin{resitemize}
-  \item Built and supported software and cloud systems in a regulated healthcare environment with security and reliability constraints.
-  \item Contributed to application, infrastructure, and delivery workflows for internal and member-facing health insurance platforms.
+  \item Built and supported software and cloud systems for healthcare platforms with strong security, privacy, and reliability constraints.
+  \item Contributed to application, infrastructure, and deployment workflows for internal and member-facing systems.
+  \item Partnered with cross-functional teams to triage production issues, improve maintainability, and ship changes safely.
 \end{resitemize}
 
-\role{Capgemini Government Solutions}{Tysons Corner, VA}{Technology Consultant / Cloud Engineer}{Prior}
+\role{Capgemini Government Solutions}{Tysons Corner, VA}{Cloud Engineer / Technology Consultant}{Prior}
 \begin{resitemize}
-  \item Developed cloud architecture and deployment automation for government technology consulting initiatives.
+  \item Developed cloud architecture, deployment automation, and technical documentation for government technology initiatives.
+  \item Applied AWS and Azure fundamentals to infrastructure design, implementation planning, and stakeholder-facing deliverables.
 \end{resitemize}
 
 \ressection{Projects}
 \project{CertScraper}{AWS, Next.js, Python, DynamoDB, Stripe, Cognito}
 \begin{resitemize}
-  \item Built a full-stack certification study platform with exam ingestion pipelines, authenticated access, and subscription gating.
+  \item Built a full-stack certification study platform with data ingestion pipelines, authenticated access, and subscription gating.
+  \item Implemented backend data flows and AWS-backed persistence for structured exam content and user-facing study workflows.
 \end{resitemize}
 
 \project{Cheetcode}{Kubernetes, Docker, CI/CD, Backend Services}
 \begin{resitemize}
-  \item Developed infrastructure and service workflows for code execution, leaderboard synchronization, and production deployments.
+  \item Developed containerized infrastructure and backend workflows for code execution, leaderboard sync, and repeatable deployments.
 \end{resitemize}
 
 \project{Horizontal Gaze Nystagmus Impairment Detection}{AWS, EC2, ML, OpenFace, Raspberry Pi}
 \begin{resitemize}
-  \item Developed the first ML model, Raspberry Pi prototype UI, and AWS backend for computational video analysis.
+  \item Developed the first ML model, Raspberry Pi prototype UI, and AWS backend for computational video analysis in an IEEE-published research system.
 \end{resitemize}
 
-\ressection{Certifications and Publications}
-13x AWS Certified; AWS Certified Solutions Architect - Professional; AWS Certified Data Engineer - Associate; AWS Certified SysOps Administrator - Associate; AWS Certified Developer - Associate; CompTIA Security+\\
-IEEE SIEDS 2024: \textbf{Enhancing Road Safety with AI}; IEEE SIEDS 2023: \textbf{Horizontal Gaze Nystagmus Transmission Interlock System}; U.S. provisional patent application 63/632,716
+\ressection{Certifications}
+13x AWS Certified; Solutions Architect - Professional; Data Engineer - Associate; SysOps Administrator - Associate; Developer - Associate; Solutions Architect - Associate; Cloud Practitioner; CompTIA Security+
+
+\ressection{Publications}
+IEEE SIEDS 2024: \textbf{Enhancing Road Safety with AI}; IEEE SIEDS 2023: \textbf{Horizontal Gaze Nystagmus Transmission Interlock System}; U.S. provisional patent 63/632,716
 
 \ressection{Education}
-\role{Arizona State University}{Tempe, AZ}{Computer Science}{GPA: 4.00}
+\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science}{GPA: 4.00}
 
 \role{James Madison University}{Harrisonburg, VA}{B.S. Computer Science; Minors in Robotics and Mathematics}{Graduated Spring 2024}
+
+\ressection{Skills}
+\textbf{Languages:} Python, TypeScript, JavaScript, Java, Scala, SQL, Bash\\
+\textbf{Infrastructure:} AWS, Kubernetes, Docker, CDK, EC2, IAM, CI/CD, Linux, GitHub Actions, Azure\\
+\textbf{Systems:} Backend APIs, distributed systems, cloud security, data pipelines, observability, testing, debugging\\
+\textbf{ML/Data:} Feature extraction, model evaluation, Random Forests, OpenFace, Python ML tooling
 
 \end{document}
