@@ -1,0 +1,77 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{2pt}
+
+\newcommand{\role}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
+}
+
+\newcommand{\project}[2]{
+  \textbf{#1} \hfill #2
+}
+
+\newcommand{\ressection}[1]{
+  \vspace{8pt}
+  {\large\textbf{#1}}\\[-6pt]
+  \rule{\textwidth}{0.4pt}
+  \vspace{2pt}
+}
+
+\newenvironment{resitemize}{
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\begin{document}
+
+{\huge \textbf{Chase Coleman}}\\
+\href{mailto:colemchase@gmail.com}{colemchase@gmail.com} \quad
+\href{https://github.com/colemchase}{github.com/colemchase} \quad
+\href{https://www.linkedin.com/in/chase-coleman}{linkedin.com/in/chase-coleman}
+
+\ressection{Summary}
+Software engineer focused on cloud infrastructure, backend systems, security, and product-minded automation. Replace this paragraph with a tight 2--3 line summary tailored to the role.
+
+\ressection{Skills}
+\textbf{Languages:} Python, TypeScript, JavaScript, Java, Scala, SQL, Bash\\
+\textbf{Cloud and Infrastructure:} AWS, Kubernetes, Docker, CDK, CI/CD, Linux\\
+\textbf{Domains:} Backend APIs, distributed systems, security, testing, data pipelines
+
+\ressection{Experience}
+\role{Company Name}{City, ST}{Software Engineer}{Month YYYY -- Present}
+\begin{resitemize}
+  \item Built and operated production services using AWS, Kubernetes, and CI/CD workflows.
+  \item Improved reliability, observability, or deployment speed by replacing this line with a measurable result.
+  \item Partnered across product and engineering to ship maintainable systems with clear operational ownership.
+\end{resitemize}
+
+\role{Previous Company}{City, ST}{Engineering Role}{Month YYYY -- Month YYYY}
+\begin{resitemize}
+  \item Designed and implemented backend features, automation, or internal tooling.
+  \item Reduced manual work or production risk by documenting a concrete technical win here.
+\end{resitemize}
+
+\ressection{Projects}
+\project{CertScraper}{AWS, Next.js, Python, DynamoDB}
+\begin{resitemize}
+  \item Built a certification study platform with ingestion pipelines, frontend delivery, and subscription-aware access control.
+\end{resitemize}
+
+\project{Cheetcode}{Kubernetes, Docker, CI/CD}
+\begin{resitemize}
+  \item Developed infrastructure and services for code execution, leaderboard syncing, and production deployment workflows.
+\end{resitemize}
+
+\ressection{Education}
+\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science}{YYYY}
+
+\end{document}
