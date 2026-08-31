@@ -1,6 +1,7 @@
 \documentclass[10pt,letterpaper]{article}
 
 \usepackage[margin=0.5in]{geometry}
+\usepackage{etoolbox}
 \usepackage[hidelinks]{hyperref}
 
 \pagestyle{empty}
@@ -10,8 +11,8 @@
 \setlength{\leftmargini}{12pt}
 
 \newcommand{\role}[4]{
-  \textbf{#1} \hfill #2\\
-  \textit{#3} \hfill \textit{#4}
+  \makebox[\textwidth]{\textbf{#1}\hfill #2}\\
+  \ifstrempty{#4}{\textit{#3}}{\makebox[\textwidth]{\textit{#3}\hfill \textit{#4}}}\par
 }
 
 \newcommand{\project}[2]{
@@ -26,36 +27,36 @@
 }
 
 \newenvironment{resitemize}{
+  \vspace{-7pt}
   \begin{itemize}
   \setlength{\itemsep}{1pt}
-  \setlength{\topsep}{1pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\partopsep}{0pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
 \begin{document}
-
+ 
 {\huge \textbf{Chase Coleman}}\\
-\href{mailto:colemchase@gmail.com}{colemchase@gmail.com} \quad
-\href{https://github.com/colemchase}{github.com/colemchase} \quad
-\href{https://www.linkedin.com/in/thechasecoleman}{linkedin.com/in/thechasecoleman}
+\href{mailto:colemchase@gmail.com}{colemchase@gmail.com} $\bullet$
+\href{https://github.com/colemchase}{github.com/colemchase} $\bullet$
+\href{https://www.linkedin.com/in/thechasecoleman}{linkedin.com/in/thechasecoleman} $\bullet$
+U.S. Citizen
 
 \ressection{Experience}
-\role{Booz Allen Hamilton}{McLean, VA}{AWS Platform Engineer}{Present}
+\role{Booz Allen Hamilton}{McLean, VA}{Site Reliability Engineer ll}{March 2026 - Present} 
 \begin{resitemize}
   \item Design, build, and maintain AWS platform capabilities across infrastructure, identity, security, and delivery workflows.
   \item Write infrastructure-as-code and automation for containerized services, CI/CD pipelines, and repeatable cloud deployments.
-  \item Debug platform issues across application, network, identity, and runtime layers; document fixes and operational patterns.
 \end{resitemize}
 
-\role{CareFirst BlueCross BlueShield}{Washington, DC}{Software Engineer, Cloud Platforms}{Prior}
+\role{CareFirst BlueCross BlueShield}{Washington, DC}{Platform Engineer ll, Contract}{July 2025 - February 2026}
 \begin{resitemize}
-  \item Built and supported software and cloud systems for healthcare platforms with strong security, privacy, and reliability constraints.
-  \item Contributed to application, infrastructure, and deployment workflows for internal and member-facing systems.
-  \item Partnered with cross-functional teams to triage production issues, improve maintainability, and ship changes safely.
+  \item Deployed and secured AWS infra in an air-gapped HIPPA environment.
 \end{resitemize}
 
-\role{Capgemini Government Solutions}{Tysons Corner, VA}{Cloud Engineer / Technology Consultant}{Prior}
+\role{Capgemini Government Solutions}{Tysons Corner, VA}{Technology Consultant}{October 2024 - July 2025}
 \begin{resitemize}
   \item Developed cloud architecture, deployment automation, and technical documentation for government technology initiatives.
   \item Applied AWS and Azure fundamentals to infrastructure design, implementation planning, and stakeholder-facing deliverables.
@@ -78,21 +79,25 @@
   \item Developed the first ML model, Raspberry Pi prototype UI, and AWS backend for computational video analysis in an IEEE-published research system.
 \end{resitemize}
 
-\ressection{Certifications}
-13x AWS Certified; Solutions Architect - Professional; Data Engineer - Associate; SysOps Administrator - Associate; Developer - Associate; Solutions Architect - Associate; Cloud Practitioner; CompTIA Security+
+\ressection{Education}
+\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science, Expected Spring 2027}{GPA: 4.00}
+
+\role{James Madison University}{Harrisonburg, VA}{B.S. Computer Science; Minors in Robotics and Mathematics}{}
+\begin{resitemize}
+  \item Capstone project received U.S. provisional patent
+\end{resitemize}
 
 \ressection{Publications}
-IEEE SIEDS 2024: \textbf{Enhancing Road Safety with AI}; IEEE SIEDS 2023: \textbf{Horizontal Gaze Nystagmus Transmission Interlock System}; U.S. provisional patent 63/632,716
+IEEE SIEDS 2024: \textbf{Enhancing Road Safety with AI}\\[-1pt]
+IEEE SIEDS 2023: \textbf{Horizontal Gaze Nystagmus Transmission Interlock System}\\[-1pt]
+U.S. provisional patent 63/632,716
 
-\ressection{Education}
-\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science}{GPA: 4.00}
-
-\role{James Madison University}{Harrisonburg, VA}{B.S. Computer Science; Minors in Robotics and Mathematics}{Graduated Spring 2024}
+\ressection{Certifications}
+AWS Golden Jacket (13x AWS Certified); AWS Solutions Architect - Professional; AWS GenAI Developer - Professional; AWS DevOps Engineer - Professional; CompTIA Security+
 
 \ressection{Skills}
-\textbf{Languages:} Python, TypeScript, JavaScript, Java, Scala, SQL, Bash\\
-\textbf{Infrastructure:} AWS, Kubernetes, Docker, CDK, EC2, IAM, CI/CD, Linux, GitHub Actions, Azure\\
-\textbf{Systems:} Backend APIs, distributed systems, cloud security, data pipelines, observability, testing, debugging\\
-\textbf{ML/Data:} Feature extraction, model evaluation, Random Forests, OpenFace, Python ML tooling
+\textbf{Languages:} Python, TypeScript, JavaScript, Java, Bash\\
+\textbf{Infrastructure:} AWS, Kubernetes, Docker, CDK, EC2, IAM, CI/CD, Linux, GitHub Actions\\
+\textbf{Systems:} Backend APIs, distributed systems, cloud security, CI/CD pipelines, observability, testing, debugging\\
 
 \end{document}
