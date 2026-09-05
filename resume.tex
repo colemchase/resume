@@ -1,6 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.5in]{geometry}
+\usepackage[left=0.5in,right=0.5in,top=0.32in,bottom=0.32in]{geometry}
 \usepackage{etoolbox}
 \usepackage[hidelinks]{hyperref}
 
@@ -12,22 +12,24 @@
 
 \newcommand{\role}[4]{
   \makebox[\textwidth]{\textbf{#1}\hfill #2}\\
-  \ifstrempty{#4}{\textit{#3}}{\makebox[\textwidth]{\textit{#3}\hfill \textit{#4}}}\par
+  \ifstrempty{#4}{\textit{#3}}{\makebox[\textwidth]{\textit{#3}\hfill \textit{#4}}}\par\vspace{1pt}
 }
 
 \newcommand{\project}[2]{
-  \textbf{#1} \hfill #2
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2
+  \end{tabular*}\par\vspace{1pt}
 }
 
 \newcommand{\ressection}[1]{
-  \vspace{4pt}
+  \vspace{5pt}
   {\large\textbf{#1}}\\[-6pt]
   \rule{\textwidth}{0.4pt}
-  \vspace{0pt}
+  \vspace{-2pt}
 }
 
 \newenvironment{resitemize}{
-  \vspace{-7pt}
+  \vspace{-6pt}
   \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\topsep}{0pt}
@@ -45,59 +47,62 @@
 U.S. Citizen
 
 \ressection{Experience}
-\role{Booz Allen Hamilton}{McLean, VA}{Site Reliability Engineer ll}{March 2026 - Present} 
+\role{Booz Allen Hamilton}{McLean, VA}{Site Reliability Engineer II}{March 2026 - Present}
 \begin{resitemize}
-  \item Design, build, and maintain AWS platform capabilities across infrastructure, identity, security, and delivery workflows.
-  \item Write infrastructure-as-code and automation for containerized services, CI/CD pipelines, and repeatable cloud deployments.
+  \item Support AWS and Kubernetes platforms serving \textbf{30 million users}, responding to production incidents on-call and conducting root cause analysis and postmortems.
+  \item Build reusable AWS infrastructure with \textbf{TypeScript CDK} for compute, identity, security, networking, and application delivery.
+  \item Manage multiple \textbf{EKS clusters}, handling upgrades, access controls, and workload rollouts to support reliable operations and continuous delivery.
+  \item Design \textbf{automated remediation} workflows and metrics-based monitoring and alerting to reduce manual intervention and improve reliability.
 \end{resitemize}
 
-\role{CareFirst BlueCross BlueShield}{Washington, DC}{Platform Engineer ll, Contract}{July 2025 - February 2026}
+\role{CareFirst BlueCross BlueShield}{Washington, DC}{Platform Engineer II, Contract}{July 2025 - February 2026}
 \begin{resitemize}
-  \item Deployed and secured AWS infra in an air-gapped HIPPA environment.
+  \item Used \textbf{Terraform} to deliver AWS infrastructure in air-gapped healthcare environments with strict security and HIPAA compliance requirements.
+  \item Owned infrastructure security for the platform team, auditing and strengthening security controls across \textbf{hundreds of AWS accounts}.
 \end{resitemize}
 
 \role{Capgemini Government Solutions}{Tysons Corner, VA}{Technology Consultant}{October 2024 - July 2025}
 \begin{resitemize}
-  \item Developed cloud architecture, deployment automation, and technical documentation for government technology initiatives.
-  \item Applied AWS and Azure fundamentals to infrastructure design, implementation planning, and stakeholder-facing deliverables.
+  \item Administered internal cloud accounts and supported delivery teams working in \textbf{AWS and Azure} environments.
+  \item Managed \textbf{cloud migration} and modernization projects, coordinating stakeholders, managing risks, and allocating resources.
+  \item Wrote \textbf{RFP and RFI responses} for government contracts, describing cloud capabilities and relevant project experience.
 \end{resitemize}
 
 \ressection{Projects}
-\project{CertScraper}{AWS, Next.js, Python, DynamoDB, Stripe, Cognito}
+\project{\href{https://cheetcode.io}{cheetcode.io}}{Distributed Systems, Python, C++}
 \begin{resitemize}
-  \item Built a full-stack certification study platform with data ingestion pipelines, authenticated access, and subscription gating.
-  \item Implemented backend data flows and AWS-backed persistence for structured exam content and user-facing study workflows.
+  \item Built a coding interview practice platform covering the top 150 coding problems, with \textbf{Python and C++} execution in containerized runners.
+  \item Implemented \textbf{distributed job queues} to handle code execution and return results in near real time.
 \end{resitemize}
 
-\project{Cheetcode}{Kubernetes, Docker, CI/CD, Backend Services}
+\project{\href{https://randomrooms.app}{randomrooms.app}}{EKS, Redis, WebSockets, WebRTC}
 \begin{resitemize}
-  \item Developed containerized infrastructure and backend workflows for code execution, leaderboard sync, and repeatable deployments.
+  \item Built 3D social chat rooms with real-time avatar presence, audio, and video streaming.
+  \item Used \textbf{Redis} for room assignment, presence tracking, and ephemeral session state, with the application deployed on AWS EKS.
+  \item Built multiplayer streaming with \textbf{WebRTC} STUN support, \textbf{WebSocket} session events, and NPC voice interactions.
 \end{resitemize}
 
-\project{Horizontal Gaze Nystagmus Impairment Detection}{AWS, EC2, ML, OpenFace, Raspberry Pi}
+\project{\href{https://www.jmu.edu/economicdevelopment/research-to-impact/jmi/innovations/hgn.shtml}{Horizontal Gaze Nystagmus Tester}}{AWS, EC2, ML, OpenFace, Raspberry Pi}
 \begin{resitemize}
-  \item Developed the first ML model, Raspberry Pi prototype UI, and AWS backend for computational video analysis in an IEEE-published research system.
+  \item Designed an edge device that uses \textbf{computer vision} to determine driver impairment, developing the original software, hardware, and cloud backend.
 \end{resitemize}
 
 \ressection{Education}
-\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science, Expected Spring 2027}{GPA: 4.00}
+\role{Arizona State University}{Tempe, AZ}{M.S. Computer Science, Expected Spring 2027}{}
+\begin{resitemize}
+  \item \textbf{GPA: 4.00}
+\end{resitemize}
 
 \role{James Madison University}{Harrisonburg, VA}{B.S. Computer Science; Minors in Robotics and Mathematics}{}
 \begin{resitemize}
-  \item Capstone project received U.S. provisional patent
+  \item \textbf{U.S. patent application} resulting from a capstone project
 \end{resitemize}
 
-\ressection{Publications}
-IEEE SIEDS 2024: \textbf{Enhancing Road Safety with AI}\\[-1pt]
-IEEE SIEDS 2023: \textbf{Horizontal Gaze Nystagmus Transmission Interlock System}\\[-1pt]
-U.S. provisional patent 63/632,716
-
 \ressection{Certifications}
-AWS Golden Jacket (13x AWS Certified); AWS Solutions Architect - Professional; AWS GenAI Developer - Professional; AWS DevOps Engineer - Professional; CompTIA Security+
+\textbf{AWS Golden Jacket (13x AWS Certified)}; AWS Solutions Architect - Professional; AWS GenAI Developer - Professional; AWS DevOps Engineer - Professional; KCNA; CompTIA Security+\par\vspace{1pt}
 
-\ressection{Skills}
-\textbf{Languages:} Python, TypeScript, JavaScript, Java, Bash\\
-\textbf{Infrastructure:} AWS, Kubernetes, Docker, CDK, EC2, IAM, CI/CD, Linux, GitHub Actions\\
-\textbf{Systems:} Backend APIs, distributed systems, cloud security, CI/CD pipelines, observability, testing, debugging\\
-
+\ressection{Publications}
+\textbf{Inventor, U.S. Patent App. Pub. No. 20250318781}\par\vspace{2pt}
+\textbf{Enhancing Road Safety with AI} (IEEE SIEDS 2024)\par\vspace{2pt}
+\textbf{Horizontal Gaze Nystagmus Transmission Interlock System} (IEEE SIEDS 2023)
 \end{document}
