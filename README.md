@@ -8,7 +8,7 @@ LaTeX source for Chase Coleman's resume.
 make
 ```
 
-The generated PDF is written to `build/resume.pdf`.
+The generated PDF is written to `build/ChaseColemanResume.pdf`.
 
 ## Clean
 

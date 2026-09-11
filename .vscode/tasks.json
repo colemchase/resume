@@ -20,7 +20,7 @@
     {
       "label": "Open resume PDF",
       "type": "shell",
-      "command": "open build/resume.pdf",
+      "command": "open build/ChaseColemanResume.pdf",
       "dependsOn": "Build resume PDF",
       "problemMatcher": []
     }
